@@ -11,7 +11,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TemplateApplication {
 
-  public static void main(String[] args) {
+  /**
+   * Main function.
+   *
+   * @param args the application arguments (usually passed from a Java main method)
+   */
+  public static void main(final String[] args) {
     SpringApplication.run(TemplateApplication.class, args);
   }
 }
