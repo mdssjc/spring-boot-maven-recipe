@@ -37,6 +37,10 @@
 
         <pitest.version>1.6.9</pitest.version>
         <pitest.junit5.version>0.14</pitest.junit5.version>
+
+        <sonar.version>3.9.0.2155</sonar.version>
+        <sonar.url.host>http://localhost:9000</sonar.url.host>
+        <sonar.login>TOKEN</sonar.login>
     </properties>
 
     <dependencies>
@@ -254,6 +258,11 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar.version}</version>
             </plugin>
         </plugins>
     </build>
