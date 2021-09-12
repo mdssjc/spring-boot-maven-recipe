@@ -154,24 +154,14 @@
                         <ruleset>/category/java/performance.xml</ruleset>
                         <ruleset>/category/java/security.xml</ruleset>
                     </rulesets>
+                    <excludeFromFailureFile>config/pmd/exclude-pmd.properties</excludeFromFailureFile>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <excludeFromFailureFile>exclude-pmd.properties</excludeFromFailureFile>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>cpd-check</id>
-                        <goals>
                             <goal>cpd-check</goal>
                         </goals>
-                        <configuration>
-                            <excludeFromFailureFile>exclude-cpd.properties</excludeFromFailureFile>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -220,23 +210,14 @@
                         <ruleset>/category/java/performance.xml</ruleset>
                         <ruleset>/category/java/security.xml</ruleset>
                     </rulesets>
+                    <excludeFromFailureFile>config/pmd/exclude-pmd.properties</excludeFromFailureFile>
                 </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>
                             <report>pmd</report>
-                        </reports>
-                        <configuration>
-                            <excludeFromFailureFile>exclude-pmd.properties</excludeFromFailureFile>
-                        </configuration>
-                    </reportSet>
-                    <reportSet>
-                        <reports>
                             <report>cpd</report>
                         </reports>
-                        <configuration>
-                            <excludeFromFailureFile>exclude-cpd.properties</excludeFromFailureFile>
-                        </configuration>
                     </reportSet>
                 </reportSets>
             </plugin>
